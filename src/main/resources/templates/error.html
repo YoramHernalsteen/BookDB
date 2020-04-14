@@ -1,0 +1,24 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/FontsAwesome/css/all.min.css}"
+          href="/party/static/css/FontsAwesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-8 offset-2 text-center">
+            <h2>Oops, it looks like you have turned the wrong page.</h2>
+            <p>Press this button to go back home</p>
+            <button><a href="/"><i class="fas fa-home fa-6x"></i></a></button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="/party/static/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/FontsAwesome/css/all.min.css}" href="/party/static/css/FontsAwesome/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/party/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="row w-100 py-3 navBar">
+        <div class="col-12">
+            <ul class="nav">
+                <li class="nav"><a class="nav-link" href="/">All books</a></li>
+                <li class="nav"><a class="nav-link" href="/advancedSearch">All books: advanced search</a></li>
+                <li class="nav"><a class="nav-link" href="/authors">All authors</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row marginTop">
+        <div class="col-2 offset-4 text-center">
+            <h2>Book details</h2>
+            <h4><p th:text="${book.title}"></p></h4>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-2 offset-4">
+            <p>Title: </p>
+        </div>
+        <div class="col-2">
+            <p th:text="${book.getTitle()}"> titel</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 offset-4">
+            <p> Author</p>
+        </div>
+        <div class="col-2">
+            <a th:text="${book.author.name}"
+               th:href="'/author/'+${book.author.id}"
+               href="/author/"
+               class="authorName">author</a>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-2 offset-4">
+            <p>Genre</p>
+        </div>
+        <div class="col-2">
+            <p th:text="${book.genre.genreName}"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 offset-4">
+            <p>ISBN</p>
+        </div>
+        <div class="col-2">
+            <p th:text="${book.getIsbn()}"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 offset-4">
+            <p>READ</p>
+        </div>
+        <div class="col-2">
+            <p th:text="${book.isRead()}"></p>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-1 offset-5">
+            <button><a th:href="'/admin/edit-book/'+${book.id}"
+                       href="/partyDetail">EDIT</a></button>
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-2 offset-4">
+            <a th:href="'/book/'+${idOfPrevBook}"
+               href="/book/idOfPrevBook"><i class="fas fa-caret-left fa-3x"></i></a>
+        </div>
+        <div class="col-2">
+            <a th:href="'/book/'+${idOfNextBook}"
+               href="/book/idOfNextBook"><i class="fas fa-caret-right fa-3x"></i></a>
+        </div>
+    </div>
+
+    <div class="row footer">
+        <div class="col-12">
+            <div class="row py-3">
+                <div class="col-3 text-center"><a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a> </div>
+                <div class="col-3 text-center"><a class="nav-link" href="#"></a><i class="fab fa-instagram fa-2x"></i> </div>
+                <div class="col-3 text-center"><a class="nav-link" href="#"></a><i class="fab fa-linkedin-in fa-2x"></i> </div>
+                <div class="col-3 text-center"><a class="nav-link" href="#"></a> <i class="fab fa-github fa-2x"></i></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Made by Yoram Hernalsteen</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

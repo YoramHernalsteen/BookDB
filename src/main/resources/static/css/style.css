@@ -1,0 +1,35 @@
+body{
+    background-color: #dbdbd9;
+    color: #10203b;
+    font-family: 'Old Standard TT', serif;
+}
+a{
+     color: #10203b;
+ }
+.navBar{
+    background-color: #10203b;;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+.nav-link{
+    color: #dbdbd9;
+    font-weight: bold;
+}
+.footer{
+    background-color: #10203b;
+    color: #dbdbd9;
+    margin-top: 7.5em;
+}
+.author{
+    margin-top: 11em;
+}
+.footer a{
+    color: #dbdbd9;
+}
+.marginTop{
+    margin-top: 7.5em;
+}
+.authorName{
+   color: #d86e3f
+}
